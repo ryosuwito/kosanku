@@ -352,13 +352,6 @@ a:hover{
   min-height:200px;
   max-height:200px;
 }
-.photo-cardView:hover{   
-  -webkit-animation: zoom 0.51s ease;
-  animation: zoom 0.51s ease;
-  background-size:auto 100%;
-  object-fit:none;
-  cursor:zoom-in;
-}
 .card-bottom{
   border-radius:8px;
   margin-bottom:20px;
