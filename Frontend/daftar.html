@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daftar</title>
+    <meta name="viewport" content="width=device-width,
+                                  initial-scale=1.0,
+                                  user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/costum.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="hidden-xs col-sm-1 col-lg-2"></div>
+    <div class="col-xs-12 col-sm-10 col-lg-8" style="display:block">
+      <div class="col-xs-12 card-bottom effect5" style="margin:90px 0;padding:0 2.5%; text-align:center">
+        <form action="action_page.php">
+          <div class="col-xs-12"style="margin:5% 0 0 0">  
+            <h2 class="unggah" style="top:62%;right:-0.64%;"id="fakeBrowse" onclick="HandleBrowseClick();"/>&plus;</h2>
+            <img id="ava" src="pictures/user.gif" alt="Avatar" class="photo-user avatar avatars" style="
+    -webkit-filter: none;width:120px;height:120px;border-radius:85px"/>
+            <p style="margin-bottom:3px;text-align:left">Foto Avatar<i style="font-size:80%"> *(.JPG/.JPEG/.PNG/.GIF)</i></p>
+            <input type="file" id="browse" name="fileupload" style="display: none" onChange="Handlechange(event);"accept="image/*"/>
+            <input class="effect5" type="text" id="filename" readonly="true"placeholder="Klik Tombol + untuk Mengunggah Foto"/></div>
+          <div class="col-xs-12 col-sm-6">
+            <div><p style="font-size:8pt;margin-bottom:3px;text-align:left">Nama Akun (maks 20 karakter tanpa spasi)<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname" required></div>
+             <div><p style="font-size:8pt;margin-bottom:3px;text-align:left">Email valid (untuk konfimasi akun)<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>  
+               <input class="effect6" style="width:100%" type="text" placeholder="Masukan Email" name="mail" required></div></div>
+           <div class="col-xs-12 col-sm-6">
+            <div><p style="font-size:8pt;margin-bottom:3px;text-align:left">Kata Sandi (min 6 karakter)<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>
+               <input class="effect6" style="width:100%" type="password" placeholder="Masukan Kata Sandi" name="psw" required></div>
+             <div><p style="font-size:8pt;margin-bottom:3px;text-align:left">Masukan ulang kata sandi<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>
+               <input class="effect6" style="width:100%" type="password" placeholder="Ulangi Kata Sandi" name="psw2" required></div></div>
+
+           <div class="col-xs-12 col-sm-6" style="padding:0 15px;display:block;text-align:left">
+             <p style="font-size:8pt;margin-bottom:3px;text-align:left">Gender :<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>
+             <input type="radio" name="gender" value="male" checked> Pria<br>
+             <input type="radio" name="gender" value="female"> Wanita<br></div>
+           <div class="col-xs-12 col-sm-6" style="padding:0 15px;display:block;text-align:left;z-index:3000">
+             <p style="font-size:8pt;margin-bottom:3px;text-align:left">Provinsi :<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>
+             
+             <select class="effect5" style="background-color:#f1f1f1;color:#888" name="Provinsi">
+               <option value="aceh">DI Aceh</option>
+               <option value="sumut">Sumatera Utara</option>
+               <option value="sumbar">Sumatera Barat</option>
+               <option value="bengkulu">Bengkulu</option>
+               <option value="kepri">Kepulauan Riau</option>
+               <option value="riau">Riau</option>
+               <option value="jambi">Jambi</option>
+               <option value="sumsel">Sumatera Selatan</option>
+               <option value="lampung">Lampung</option>
+               <option value="babel">Bangka Belitung</option>
+               <option value="jakarta">DKI Jakarta</option>
+               <option value="jabar">Jawa Barat</option>
+               <option value="banten">Banten</option>
+               <option value="jateng">Jawa Tengah</option>
+               <option value="yogya">DI Yogyakarta</option>
+               <option value="jatim">Jawa Timur</option>
+               <option value="kalbar">Kalimantan Barat</option>
+               <option value="kalteng">Kalimantan Tengah</option>
+               <option value="kalsel">Kalimantan Selatan</option>
+               <option value="kaltim">Kalimantan Timur</option>
+               <option value="kaltara">Kalimantan Utara</option>
+               <option value="bali">Bali</option>
+               <option value="ntb">Nusa Tenggara Barat</option>
+               <option value="ntt">Nusa Tenggara Timur</option>
+               <option value="sulbar">Sulawesi Barat</option>
+               <option value="sulut">Sulawesi Utara</option>
+               <option value="sulteng">Sulawesi Tengah</option>
+               <option value="sulsel">Sulawesi Selatan</option>
+               <option value="sultra">Sulawesi Tenggara</option>
+               <option value="gorontalo">Gorontalo</option>
+               <option value="maluku">Maluku</option>
+               <option value="malut">Maluku Utara</option>
+               <option value="papbar">Papua Barat</option>
+               <option value="papua">DK Papua</option>
+               <option value="papbar">DK Papua Barat</option>
+               <option value="telcen">Teluk Cendrawasih</option></select></div>
+               <div class="col-xs-12" style="margin:10px 0;display:block;height:auto;padding:0 0px 0px 0px">
+                 <div class="col-xs-12" style="background-color:rgba(200,150,0,0.365);margin-bottom:10px">
+                    <h5 style="margin:15px">Jika kamu berniat membuka lapak, isilah kotak dibawah ini untuk memudahkan pelanggan menghubungimu. Kontak yang kamu masukan akan ditampilkan di halaman profil kamu. Kamu bisa mengubahnya nanti.</h5></div>
+                    <h4 class="title" style="margin:0 0 0 10px">Media Sosial<i style="font-size:70%;font-weight:normal"> *(opsional)</i></h4>
+            <div class="col-xs-12 col-sm-6 detail-box" style="background-color:transparent">
+                <a href="#cardView-title"><h5 class="cool" style="margin:0" onClick="fillCards(10,0,'Topik');">Instagram</h5></a>
+                    
+            <div>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname"></div></div>
+                  <div class="col-xs-12 col-sm-6 detail-box" style="background-color:transparent">
+                    <a href="#cardView-title"><h5 class="cool" style="margin:0" onClick="fillCards(2,0,'Mading');">Facebook</h5></a>
+                    
+            <div>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname"></div></div>
+                  <div class="col-xs-12 col-sm-6 detail-box" style="background-color:transparent">
+                    <a href="#cardView-title"><h5 class="cool" style="margin:0" onClick="fillCards(15,0,'Dagangan');">Youtube Channel</h5></a>
+                    
+            <div>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname"></div></div>
+                  <div class="col-xs-12 col-sm-6 detail-box" style="background-color:transparent">
+                    <a href="#cardView-title"><h5 class="cool" style="margin:0" onClick="fillCards(8,0,'Komentar');">Twitter</h5></a>
+                    
+            <div>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname"></div></div>
+                </div>
+               <div class="col-xs-12" style="margin:10px 0;display:block;height:auto;padding:0 0px 0px 0px">
+                    <h4 class="title" style="margin:0 0 0 10px">Kontak<i style="font-size:70%;font-weight:normal"> *(opsional)</i></h4>
+                  <div class="col-xs-12 col-sm-6 detail-box" style="background-color:transparent">
+                    <a href="#cardView-title"><h5 class="cool" style="margin:0" onClick="fillCards(10,0,'Topik');">LINE</h5></a>
+                    
+            <div>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname"></div></div>
+                  <div class="col-xs-12 col-sm-6 detail-box" style="background-color:transparent">
+                    <a href="#cardView-title"><h5 class="cool" style="margin:0" onClick="fillCards(2,0,'Mading');">Whatsapp</h5></a>
+                    
+            <div>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname"></div></div>
+                  <div class="col-xs-12 col-sm-6 detail-box" style="background-color:transparent">
+                    <a href="#cardView-title"><h5 class="cool" style="margin:0" onClick="fillCards(15,0,'Dagangan');">BBM</h5></a>
+                    
+            <div>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname"></div></div>
+                  <div class="col-xs-12 col-sm-6 detail-box" style="background-color:transparent">
+                    <a href="#cardView-title"><h5 class="cool" style="margin:0" onClick="fillCards(8,0,'Komentar');">Phone/SMS</h5></a>
+                    
+            <div>  
+              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname"></div></div>
+                </div>
+           <div class="col-xs-3"></div>
+           <div class="col-xs-12 col-sm-6" style="margin-top:20px">
+             <button class="daftar-cool effect4" style="width:100%" type="submit">Kirim</button>
+             <p style="padding:1px">
+               <a href="http://www.freepik.com/free-photos-vectors/people" style="color:#888">People vector designed by Freepik</a></p></div>
+           <div class="col-xs-3"></div>
+         </form></div></div>
+    <div class="hidden-xs col-sm-1 col-lg-2"></div></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script language="JavaScript" type="text/javascript">
+       function HandleBrowseClick(){
+         var fileinput = document.getElementById("browse");
+         fileinput.click(); 
+       }
+       function Handlechange(event){
+         var fileinput = document.getElementById("browse");
+         var textinput = document.getElementById("filename");
+         textinput.value = fileinput.value;
+         var selectedFile = event.target.files[0];
+         var reader = new FileReader();
+
+         var imgtag = document.getElementById("ava");
+         imgtag.title = selectedFile.name;
+
+         reader.onload = function(event) {
+         imgtag.src = event.target.result;
+         };
+
+         reader.readAsDataURL(selectedFile);
+        }
+</script>
+  </body>
+</html>
