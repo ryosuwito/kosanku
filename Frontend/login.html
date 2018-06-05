@@ -16,72 +16,19 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
   </head>
-  <nav class="navbar navbar-default navbar-fixed-top"
-      role="navigation"
-      style="z-index:5;margin:0">
-    <div class="navbar-header" >
-      <button type="button" class="navbar-toggle" data-toggle="collapse"
-        data-target="#navbar-collapse">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img src="image/logo-white.png">
-      </a>
-    </div>
-    <div id="navbar-collapse" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle"
-            data-toggle="dropdown">Forum
-            <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="forum.html">Wisata Alam</a></li>
-            <li><a href="#">Wisata Urban</a></li>
-            <li><a href="#">Wisata Kuliner</a></li>
-            <li><a href="#">Wisata Sejarah</a></li>
-            <li><a href="#">Wisata Budaya</a></li>
-            <li><a href="#">Forum Regional</a></li>
-            <li><a href="#">Peraturan Forum</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle"
-            data-toggle="dropdown">Lapak
-            <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Gelar Lapak</a></li>
-            <li><a href="lapak.html">Pasar Kaget</a></li>
-            <li><a href="#">Panduan</a></li>
-          </ul>
-        </li>
-        
-      </ul>
-      <ul class="nav navbar-nav navbar-right" style="display:flex;align-items:center;padding:0px 15px; margin:0">
-        <li class="hidden-xs" style="text-align:center;padding:0 10px; margin:0"><h3 class="stylish white">ruangpelancong.co.id</h3></li>
-        <a href="login.html"><li class="masuk">Masuk</li></a>
-      </ul>
-    </div>
-  </nav>
-  <body  style="margin-top:0px; background-image:url(image/orn4.png);background-repeat:repeat-x repeat-y;
-    min-height:auto;background-color:#fff;padding: 0;">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <body  style="margin-top:0px; background-image:url(pictures/orn4.png);
+    min-height:auto;background-color:#009c9c;padding: 0;">
     <div class="container">
     <div class="hidden-xs col-md-1 col-lg-2"></div>
     <div class="col-xs-12 col-md-10 col-lg-8" style="display:block;height:100%">
       <div class="col-xs-12 col-sm-6 col-md-5 card-bottom effect5" style="margin-top:21.6%; text-align:center">
         <form action="action_page.php">
           <div class="col-xs-12"style="margin:10px 0">
-            <img id="ava" src="image/user5.png" alt="Avatar" class="photo-user avatar avatars" style="
-    -webkit-filter: none;width:120px;height:120px;border-radius:85px"/></div>
+            <img id="ava" src="pictures/user.gif" alt="Avatar" class="photo-user avatar avatars" style="
+    -webkit-filter: none;filter: none;width:120px;height:120px;border-radius:85px"/></div>
 
            <div>  
-             <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama/ Email" name="uname" required></div>
+             <input class="effect6" style="width:100%" type="text" placeholder="Masukan Email" name="uname" required></div>
            <div>
              <input class="effect6" style="width:100%" type="password" placeholder="Masukan Kata Sandi" name="psw" required></div>
            <div class="row" style="padding:0 5.3%">
@@ -101,18 +48,12 @@
 
         <div class="hidden-xs col-sm-5 col-md-6 card-bottom effect5" style="margin-top:21.6%;color:#aaa;text-align:center">
             <h3 class="headline" style="text-align:center;">
-            ruangpelancong.co.id</h3>
+            kosanku.co.id</h3>
             <h5 class="title" style="text-align:center;font-weight:normal">
             Tempat kamu berbagi keseruan, cerita, foto, dan tips berpergian sekaligus berniaga dengan sesama pelancong Indonesia!</h5>
             <h3 class="headline" style="text-align:center;">Buruan Daftar !</h3>
         </div></div>
         <div class="hidden-xs col-md-1 col-lg-2"></div></div>
-        <script> 
-            setInterval(function(){
-                var i = Math.floor((Math.random() * 12) + 1);
-                document.getElementById('ava').src='image/user'+i+'.png';
-            },1999);
-        </script>
         <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
         <script type="text/javascript" src="javascript/jquery-3.2.1.slim.min.js"></script>
         <script type="text/javascript" src="javascript/popper.min.js"></script>
