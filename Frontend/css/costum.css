@@ -453,7 +453,7 @@ a:hover{
   border:1px solid rgba(85,85,85, 0.241);
 }
 .effect6{ 
-  background-color:rgba(255,255,255,0.35);
+  background-color:rgba(255,255,255,1);
   z-index:3;
   border:1px solid rgba(85,85,85, 0.241);
   box-shadow:0px 2px 2px rgba(0,0,0,0.345);
@@ -462,36 +462,30 @@ a:hover{
   cursor:pointer;
   -webkit-animation: color 0.71s ease;
   animation: color 0.71s ease;
-  background-color:rgba(255,255,255,0.565);
+  background-color:rgba(255,255,255,1);
   position:relative;
   box-shadow:0px 3px 3px rgba(0,0,0,0.445),0px 0px 24px  rgba(0,0,0,0.255);
 }
 @-webkit-keyframes color {
   0% {
-    background-color:rgba(255,255,255,0.475);
     box-shadow:0px 3px 2px rgba(0,0,0,0.345),0px 0px 24px  rgba(0,0,0,0.155);
   }
   30% {
-    background-color:rgba(255,255,255,0.675);
     box-shadow:0px 3px 2px rgba(0,0,0,0.545),0px 0px 24px 2px rgba(0,0,0,0.355);
   }
   100% {
-    background-color:rgba(255,255,255,0.565);
     box-shadow:0px 3px 3px rgba(0,0,0,0.445),0px 0px 24px  rgba(0,0,0,0.255);
   }
 }
 
 @keyframes color{
   0% {
-    background-color:rgba(255,255,255,0.475);
     box-shadow:0px 3px 2px rgba(0,0,0,0.345),0px 0px 24px  rgba(0,0,0,0.155);
   }
   30% {
-    background-color:rgba(255,255,255,0.675);
     box-shadow:0px 3px 2px rgba(0,0,0,0.545),0px 0px 24px 2px rgba(0,0,0,0.355);
   }
   100% {
-    background-color:rgba(255,255,255,0.565);
     box-shadow:0px 3px 3px rgba(0,0,0,0.445),0px 0px 24px  rgba(0,0,0,0.255);
   }
 }
@@ -584,10 +578,10 @@ a:hover{
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
   color:#fff;
   height:100%;padding:10px 0;margin:0;
-  text-align:center;background-color:#0f5689;
+  text-align:center;background-color:#195aef;
 
 }
-.link-div:hover{background-color:#2f6699;
+.link-div:hover{
   position:relative;
   z-index:10;
   -webkit-animation: shadow 0.71s ease;
@@ -670,11 +664,11 @@ a:hover{
   }
   .card-deck{
     position:fixed;
-    top:30.90%;
-    right:3.8%;
+    bottom:0;
+    right:32px;
     z-index:2;
     width:20%;
-    background-color:rgba(240,240,240,0.86)
+    background-color:#fff
   }
 
   .sponsor-box{
@@ -1134,7 +1128,7 @@ a:hover{
 
 .daftar{
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
-  background-color:#ff2848;
+  background-color:#ff3f5b;
   color:#fff
 }
 .daftar:hover{
@@ -1148,7 +1142,7 @@ a:hover{
 }
 .daftar-cool{
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
-  background-color:#0d7979;
+  background-color:#195aef;
   color:#fff
 }
 .daftar-cool:hover{

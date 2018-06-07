@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profil | Tukang Kibul</title>
+    <meta name="viewport" content="width=device-width,
+                                  initial-scale=1.0,
+                                  user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/costum2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  </head>
+  <nav class="navbar navbar-default navbar-fixed-top"
+      role="navigation"
+      style="z-index:5">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target="#navbar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="image/logo.png">
+      </a>
+    </div>
+    <div id="navbar-collapse" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"
+            data-toggle="dropdown">Forum
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="forum.html">Wisata Alam</a></li>
+            <li><a href="#">Wisata Urban</a></li>
+            <li><a href="#">Wisata Kuliner</a></li>
+            <li><a href="#">Wisata Sejarah</a></li>
+            <li><a href="#">Wisata Budaya</a></li>
+            <li><a href="#">Forum Regional</a></li>
+            <li><a href="#">Peraturan Forum</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"
+            data-toggle="dropdown">Lapak
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Gelar Lapak</a></li>
+            <li><a href="lapak.html">Pasar Kaget</a></li>
+            <li><a href="#">Panduan</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right" style="display:flex;align-items:center;padding:0px 15px; margin:0">
+        <li class="hidden-xs" style="text-align:center;padding:0 10px; margin:0"><h4 class="stylish white">ruangpelancong.co.id</h4></li>
+        <a href="login.html"><li class="masuk">Masuk</li></a>
+      </ul>
+    </div>
+  </nav>
+  <body>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+      var currentStart = 1;
+      var title="";
+      $(document).ready(function(){
+      })
+      function fillCards(){
+         var x = arguments[0];
+         var y = arguments[1];
+         if(arguments[2]!=null)title=arguments[2];
+         var s = 1;
+         if(currentStart<12 && y<0){
+           return;
+         }
+         if(y>0 || y<0){
+          currentStart += y;
+         }
+          else{
+            currentStart = x + y;
+         }
+         var im = currentStart;
+         for (i=1; i<6; i++){
+           document.getElementById('cardsPage'+i).className="enabled";
+         } 
+         switch(im){
+           case 1:
+             document.getElementById('cardsPage1').className="active";
+             break;
+           case 13:
+             document.getElementById('cardsPage2').className="active";
+             break;
+           case 25:
+             document.getElementById('cardsPage3').className="active";
+             break;
+           case 37:
+             document.getElementById('cardsPage4').className="active";
+             break;
+           case 49:
+             document.getElementById('cardsPage5').className="active";
+             break;
+           default:
+             document.getElementById('cardsPage1').className="active";
+             break;       
+         }  
+         document.getElementById('cardView-title').textContent=title;
+         for (i=s; i<13; i++){
+           document.getElementById('cards'+i).src='../bot/advertise.'+[im]+'.jpg';
+           document.getElementById('cards'+i+'-title').textContent=im+"Kamera & Gadget Lainnya";
+           im++;
+         }
+         if(currentStart<12){
+           document.getElementById('cardsPrev').className="disabled";
+         }
+           else{
+           document.getElementById('cardsPrev').className="enabled";
+         }
+
+       }
+    </script>
+    <script>
+    function modalImage(){
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById(arguments[0]);
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.innerHTML = img.alt;
+
+       // Get the <span> element that closes the modal
+       var span = document.getElementsByClassName("close")[0];
+
+       // When the user clicks on <span> (x), close the modal
+       span.onclick = function() {
+       modal.style.display = "none";
+       }
+    }
+    </script>
+    <section name="header">
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+      <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div></div>
+    <div class="effect5" style="margin-top:0px; background-image:url(image/orn3.jpg);background-repeat:repeat-x repeat-y;
+    min-height:auto;background-color:rgba(200,200,200,0.366);padding:20px 0 40px 0">
+    <div class="container"><!--Container#1 -->
+       <div class="row"><!-- Row#1 of Container#1 -->
+             <div class="col-xs-12 card-bottom" style="background-color:rgba(49,200,250,0.98);margin:7.9% 0 0 0;display:block;height:auto;padding:10px">
+               <h2 class="title white" style="margin:0 0 0 10px">Selamat Datang Kaka...!</h2>
+             <h4 class="link-div" style="background-color:transparent;width:auto;height:auto;position:absolute;top:0;right:5px;padding:1.15% 1.16%;"><span class="glyphicon glyphicon-edit"></span></h4></div>
+         <div class="col-md-8 col-xs-12">
+         <div class="col-xs-12 card-bottom card-md effect6" style="padding:20px 0;margin-top:3.5%"><!-- Parent of Header | Child of Row#1 Container#1 -->
+                  <h5 class="unggah-hold" style="width:auto;height:auto;
+                     top:14.5%;padding:6px 10px;z-index:3000;
+                     right:1.34%;background-color:rgba(49,200,250,0.98);"/>Pengikut : 3489</h5>
+                  <h5 class="unggah" style="width:auto;height:auto;
+                     top:3.25%;padding:6px 12px;z-index:3000;
+                     right:1.34%;"/>FOLLOW</h5>
+            <div name="prf-header" class="col-xs-12" style="padding:10px 0">
+              <div name="prf-ava" class="col-xs-12 col-sm-3">
+                <img id="ava" src="image/indah.jpg" alt="Avatar" class="photo-user avatar avatars" style="
+    -webkit-filter: none;width:120px;height:120px;border-radius:85px; padding:5px"/></div>
+              <div name="prf-title" class="col-xs-12 col-sm-9">
+                <div class="card-bottom" style="margin-bottom:10px;display:block;height:2.4em;padding:0">
+                  <h3 class="title" style="text-align:left;margin:0 0 0 10px">TUKANG KIBUL</h3></div>
+                <div class="card-bottom" style="margin-top:0;display:block;height:auto;padding:0 0px 10px 10px">
+                  <h5 class="desc" style="text-align:left;margin:0">Asal : Daerah Istimewa Yogyakarta</h5>
+                  <h5 class="desc" style="text-align:left;margin:0">Bergabung Sejak : 17 Agustus 1945</h5>
+                  <h5 class="desc" style="text-align:left;margin:0">Lapak : <strong class="cool">Yogya Shopas</strong></h5></div>
+              </div>
+            </div>
+                <div class="card-bottom" style="margin-top:0;display:block;height:auto;padding:0 0px 0px 0px">
+                  <div class="col-xs-6 col-sm-3 detail-box">
+                    <a href="#cardView-title"><h5 class="desc cool" style="margin:0;text-align:center" onClick="fillCards(10,0,'Topik');">Topik</h5></a>
+                    <h2 class="desc" style="margin:0;text-align:center">145</h2></div>
+                  <div class="col-xs-6 col-sm-3 detail-box">
+                    <a href="#cardView-title"><h5 class="desc cool" style="margin:0;text-align:center" onClick="fillCards(2,0,'Mading');">Mading</h5></a>
+                    <h2 class="desc" style="margin:0;text-align:center">145</h2></div>
+                  <div class="col-xs-6 col-sm-3 detail-box">
+                    <a href="#cardView-title"><h5 class="desc cool" style="margin:0;text-align:center" onClick="fillCards(15,0,'Dagangan');">Dagangan</h5></a>
+                    <h2 class="desc" style="margin:0;text-align:center">145</h2></div>
+                  <div class="col-xs-6 col-sm-3 detail-box">
+                    <a href="#cardView-title"><h5 class="desc cool" style="margin:0;text-align:center" onClick="fillCards(8,0,'Komentar');">Komentar</h5></a>
+                    <h2 class="desc" style="margin:0;text-align:center">145</h2></div>
+                </div></div></div>
+         <div name="socio-box" class="col-xs-12 col-md-4">
+           <div class="col-xs-12 card-bottom card-md effect6" style="min-height:auto;px;margin-top:30px;padding:0">
+              <div class="col-xs-12 card-bottom " style="background-color:transparent;margin-bottom:10px;display:block;height:auto;padding:0 10px">
+             <div class="col-xs-12 card-bottom" style="margin-bottom:10px;display:block;height:auto;padding:3px">
+                 <h4 class="title" style="margin:10px 0">Media Sosial</h4></div>
+                  <div class="col-xs-3 detail-box social" style="background-color:rgba(49,200,250,0.98)">
+                    <h2 class="desc white" style="text-align:center;padding:0;margin:0"><span class="fa fa-instagram"></span></h2></div>
+                  <div class="col-xs-3 detail-box social" style="background-color:rgba(49,200,250,0.98)">
+                    <h2 class="desc white" style="text-align:center;padding:0;margin:0"><span class="fa fa-facebook"></span></h2></div>
+                  <div class="col-xs-3 detail-box social" style="background-color:rgba(49,200,250,0.98)">
+                    <h2 class="desc white" style="text-align:center;padding:0;margin:0"><span class="fa fa-youtube"></span></h2></div>
+                  <div class="col-xs-3 detail-box social" style="background-color:rgba(49,200,250,0.98)">
+                    <h2 class="desc white" style="text-align:center;padding:0;margin:0"><span class="fa fa-twitter"></span></h2></div>
+                </div>
+              <div class="col-xs-12 card-bottom" style="background-color:transparent;margin-bottom:10px;display:block;height:auto;padding:0">
+                 <h4 class="title" style="margin:10px">Kontak</h4></div>
+                  <div class="col-xs-5 col-lg-4 col-sm-2 col-md-5" style="padding:0 0 0 8px;min-height:0;margin:5px 0">
+                    <h5 class="desc cool" style="margin:0">LINE</h5></div>
+                  <div class="col-xs-7 col-lg-8 col-sm-4 col-md-7" style="padding:0 8px 0 0;min-height:0;margin:5px 0">
+                    <h5 class="desc cool" style="margin:0">: @yogashopas</h5></div>
+                  <div class="col-xs-5 col-lg-4 col-sm-2 col-md-5" style="padding:0 0 0 8px;min-height:0;margin:5px 0">
+                    <h5 class="desc cool" style="margin:0">WhatsApp</h5></div>
+                  <div class="col-xs-7 col-lg-8 col-sm-4 col-md-7" style="padding:0 8px 0 0;min-height:0;margin:5px 0">
+                    <h5 class="desc cool" style="margin:0">: 0812544645</h5></div>
+                  <div class="col-xs-5 col-lg-4 col-sm-2 col-md-5" style="padding:0 0 0 8px;min-height:0;margin:5px 0">
+                    <h5 class="desc cool" style="margin:0">BBM</h5></div>
+                  <div class="col-xs-7 col-lg-8 col-sm-4 col-md-7" style="padding:0 8px 0 0;min-height:0;margin:5px 0">
+                    <h5 class="desc cool" style="margin:0">: 10D567</h5></div>
+                  <div class="col-xs-5 col-lg-4 col-sm-2 col-md-5" style="padding:0 0 0 8px;min-height:0;margin:5px 0">
+                    <h5 class="desc cool" style="margin:0">Phone/SMS</h5></div>
+                  <div class="col-xs-7 col-lg-8 col-sm-4 col-md-7" style="padding:0 8px 0 0;min-height:0;margin:5px 0">
+                    <h5 class="desc cool" style="margin:0">: +6281383613003</h5></div>
+                </div></div></div></div></div></div>
+<!-- ====================================================================================================================================== -->
+    <div  style=" background-image:url(image/orn5.jpg);background-repeat:repeat-x repeat-y;background-color:rgba(49,200,250,0.28); padding:20px 0;z-index:2000;position:relative">
+    <div class="container" style="margin-top:20px;padding:0"><!--Container#1 -->
+<!-- ====================================================================================================================================== -->
+         <div name="socio-box" class="col-xs-12 col-md-8" style="padding:0">
+           <div class="col-xs-12 card-bottom card-md effect5" style="min-height:480px;padding:20px 2%;margin-top:10px;background-color:rgba(255,255,255,0.524)">
+             <div class="col-xs-12 card-bottom" style="margin-bottom:10px;display:block;height:auto;padding:3px">
+               <h4 id="cardView-title" class="title" style="margin:0 0 0 10px">Aktivitas</h4></div>
+       <div class="row card-box" style="padding:0"><!-- Row#1 of Container#1 -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards1" src="image/advertise13.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div>
+<!-- ====================================================================================================================================== -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards2" src="image/advertise38.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div>
+<!-- ====================================================================================================================================== -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards3" src="image/advertise32.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div></div>
+<!-- ====================================================================================================================================== -->
+         <div class="row card-box" style="padding:0">
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards4" src="image/advertise33.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div>
+<!-- ====================================================================================================================================== -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards5" src="image/advertise63.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div>
+<!-- ====================================================================================================================================== -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards6" src="image/advertise3.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div></div>
+<!-- ====================================================================================================================================== -->
+         <div class="row card-box" style="padding:0">
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards7" src="image/advertise39.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div> 
+<!-- ====================================================================================================================================== -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards8" src="image/advertise3.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div>
+<!-- ====================================================================================================================================== -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards9" src="image/advertise73.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div></div>
+<!-- ====================================================================================================================================== -->
+         <div class="row card-box" style="padding:0">
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards10" src="image/advertise3.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div> 
+<!-- ====================================================================================================================================== -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards11" src="image/advertise53.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div>
+<!-- ====================================================================================================================================== -->
+        <div class="col-xs-12 col-sm-4 col-md-4 alay"  style="margin:15px 0;background-color:transparent;border:none"> 
+           <div class="col-xs-12">
+              <h7 style="color:#888;font-size:80%;">Kiriman : <b>24/02/2017</b></h7></div>
+                    <a href=""><img class="photo-mading" id="cards12" src="image/advertise37.jpg"></a>
+                    <div class="overlay overlay-cover"style="text-align:center;">
+                    <a href="#" class="white-link"><span class="glyphicon glyphicon-heart" 
+                       style="font-size: 60px; height:auto;box-shadow:none;background-color:transparent;left:0;right:0;top:42%"></span></a>
+                    </div>
+                    <div class="overlay overlay-atas-kiri">  
+                    </div>
+                     <div class="overlay overlay-bawah-kanan">  </div>
+                    </div>
+<!-- ====================================================================================================================================== -->
+            <section name="section-footer">
+              <div class="row" style="padding:0; height:auto; display:block;margin-bottom:0px">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10" style="text-align:center"> 
+                  <ul class="pagination pagination-sm">
+                    <li id="cardsPrev"><a href="#cardView-title" onClick="fillCards(0,-12);">&lt</a></li>
+                    <li id="cardsPage1"><a href="#cardView-title" onClick="fillCards(1,0);">1</a></li>
+                    <li id="cardsPage2"><a id="cardsPageText2" href="#cardView-title" onClick="fillCards(13,0);">2</a></li>
+                    <li id="cardsPage3"><a href="#cardView-title" onClick="fillCards(25,0);">3</a></li>
+                    <li id="cardsPage4"><a href="#cardView-title" onClick="fillCards(37,0);">4</a></li>
+                    <li id="cardsPage5"><a href="#cardView-title" onClick="fillCards(49,0);">5</a></li>
+                    <li id="cardsNext"><a href="#cardView-title" onClick="fillCards(0,12);">&gt</a></li></ul></div>
+                <div class="col-xs-1"></div></div></section></div></div></div>
+<!-- ====================================================================================================================================== -->
+         <div name="socio-box" class="col-xs-12 col-md-4">
+           <div class="col-xs-12 card-bottom card-md effect6" style="min-height:480px;padding:20px 30px;margin-top:10px">
+             <div class="col-xs-12 card-bottom" style="margin-bottom:10px;display:block;height:auto;padding:3px">
+               <h4 class="title" style="margin:0 0 0 10px">Aktivitas</h4></div><!-- Parent of Header | Child of Row#1 Container#1 -->
+             
+           </div></div></div>
+         </div><!-- NOU of Row#1 Container#1 -->
+       </div><!--Eof Row#1 of Container#1 -->
+       <div class="row"><!--Row#2 of Container#1 -->
+       </div><!--Eof Row#2 of Container#1 -->
+    </div><!--Eof Container#1 -->
+<!--## Menu Bottom ##-->
+            <div class="container menu-bottom" style="width:100%;padding-top:0px;height:auto;background-color:#0f5689">
+                <div class="row">
+                <div class="hidden-xs col-lg-3"></div>
+                <div class="col-xs-12 col-lg-6">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 link-div">Tentang Kami</div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 link-div">Peraturan Situs</div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 link-div">Saran dan Masukan</div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 link-div">Advertising</div></div>
+                <div class="hidden-xs col-lg-3"></div></div></div>
+<!--## Section Footer ##-->
+          <section name="footer">
+            <div class="container menu-footer" style="width:100%;padding:10px 15px 20px 15px;display:block">
+                    <h3 class="headline" style="text-align:center; color:#fff; margin:0; padding-top:20px; padding-bottom:20px">
+                      Update Topik Terkini, Ikuti Kami di:</h3>
+              <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1"></div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10" style="padding:0 12px">
+                      <div class="icons-holder col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin:5px 0">
+                        <img class="icons" src="image/scl-twitter.png"></div>
+                      <div class="icons-holder col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin:5px 0">
+                        <img class="icons" src="image/scl-youtube.png"></div>
+                      <div class="icons-holder col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin:5px 0">
+                        <img class="icons" src="image/scl-facebook.png"></div>
+                      <div class="icons-holder col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin:5px 0">
+                        <img class="icons" src="image/scl-ig.png"></div></div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1"></div></div><div></section>
+
+    <script>
+      document.getElementById('cardView-title').textContent="Lapak Teraktif";
+        for (i=1; i<13; i++){
+           var img = document.getElementById('cards'+i);
+           document.getElementById('cards'+i).src='image/advertise'+[i]+'.jpg';
+           img.style.maxHeight = 'none';
+           img.style.height = img.clientWidth+'px';
+           img.style.backgroundSize='auto 100%';
+           img.style.overflow='hidden';
+           img.style.objectFit='cover';
+        } 
+    </script>
+  </body>
+</html>
