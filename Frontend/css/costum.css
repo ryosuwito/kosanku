@@ -40,7 +40,9 @@ body{
   background-color:#009c9c;
 }
 
-
+.star{
+  color:#f18900;
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -157,6 +159,14 @@ body{
   font-weight:bold;
   text-align:center;
   color:#555
+}
+p{
+  font-size: 14px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+ul > li{
+  font-size: 14px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
 .subtitle{
   font-size:80%;
@@ -397,7 +407,7 @@ a:hover{
   padding:10px;
   border:1px solid  rgba(255, 255, 255, 0.55);
   box-shadow:0 0 2px 1px rgba(55, 55, 55, 0.55),0 0 5px rgba(0, 0, 0, 0.41) inset;
-  background-color:#59CCB7;
+  background-color:#195aef;
   border-top-right-radius:4em;
   border-bottom-right-radius:4em;
 }
@@ -745,6 +755,9 @@ a:hover{
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
+  .price{
+    font-size: 24px !important;
+  }
   .card-con{
     padding:0;
     width:100%
@@ -763,7 +776,7 @@ a:hover{
   .sponsor-box{
     width:100%;
     margin-top:20px;
-    padding:20px 7.75%;
+    padding:10px 0;
   }
   .ava-box{
     border-bottom:solid 1px #aaa;
@@ -970,9 +983,9 @@ a:hover{
   }
   .avatar{
     margin:3px 0;
-    width:40px;
+    width:80px;
     min-height:0;
-    height:40px;
+    height:80px;
     border-radius:40px
   }
   h3 .label-box{
