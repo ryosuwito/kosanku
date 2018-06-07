@@ -1195,15 +1195,18 @@ a:hover{
     transform:  rotate(0deg) ;
   }
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=number] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  background-color: #e5e5e5;
+  background-color: #fff;
   color:#555;
+}
+.input-disabled{
+  background-color: #ddd !important;
 }
 button{
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
