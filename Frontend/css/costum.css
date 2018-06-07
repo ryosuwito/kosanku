@@ -769,6 +769,10 @@ a:hover{
   .ava-box{
     border-bottom:solid 1px #aaa;
   } 
+
+  .sponsor-row{
+    padding:0;
+  }
 }
  
 /* Landscape phones and down */
@@ -945,6 +949,7 @@ a:hover{
   }
   .card-bottom{
     margin:10px 0;
+    border-radius: 0;
   }
   .headline{
     font-size:120%
