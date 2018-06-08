@@ -17,7 +17,15 @@
   
         function setHeight(img){
           img.style.minHeight = '0';
-          img.style.maxHeight = '180px';
+          if(window.innerWidth>767){
+            img.style.maxHeight = '180px';
+          } else {
+            if(img.classList.contains("main-photo") != false){
+              img.style.maxHeight = '240px';
+            } else {
+              img.style.maxHeight = '110px';
+            }
+          }
           img.style.height = img.clientWidth+'px';
           img.style.backgroundSize='auto 100%';
           img.style.overflow='hidden';
@@ -27,7 +35,7 @@
     <section name="header">
       <div class="container">
        <div class="row" style="padding:0">
-           <div class="col-xs-12 card-bottom effect5" style="margin-top:4.3%;background-color:#ffbd5a;min-height:0;display:block;text-align:center;padding:0;">
+           <div class="col-xs-12 card-bottom effect5 detail-title">
              <h3 class="title" style="padding:10px;margin:0">Kamar Rapih Dekat UMN Tangerang</h3></div>
       </div></div>
 
@@ -45,12 +53,15 @@
                       <span class="glyphicon glyphicon-star star"></span>
                     </h3>
                 </div>
+                <div class="col-xs-12 col-sm-4 main-photo-box">
+                  <img onLoad="setHeight(this)" class="photo-user photo-article main-photo" style="display:block;padding:1.2%" src="pictures/kost1.jpg"></div>
+                <div class="col-xs-12 col-sm-4 main-photo-box">
+                <img onLoad="setHeight(this)" class="photo-user photo-article main-photo" style="display:block;padding:1.2%" src="pictures/kost2.jpg"></div>
+                <div class="col-xs-12 col-sm-4 main-photo-box">
+                <img onLoad="setHeight(this)" class="photo-user photo-article main-photo" style="display:block;padding:1.2%" src="pictures/kost3.jpg"></div>
              </section>
              <section name="post-content">
                <div class="col-xs-12 card-md"style="margin:10px 0 0 0;padding:0 10px">
-                  <img onLoad="setHeight(this)" class="col-xs-12 col-sm-4" style="display:block;padding:1.2%" class="photo-user photo-article" src="pictures/kost1.jpg">
-                  <img onLoad="setHeight(this)" class="col-xs-12 col-sm-4" style="display:block;padding:1.2%" class="photo-user photo-article" src="pictures/kost2.jpg">
-                  <img onLoad="setHeight(this)" class="col-xs-12 col-sm-4" style="display:block;padding:1.2%" class="photo-user photo-article" src="pictures/kost3.jpg">
                  <div class="col-xs-12" style="display:block; min-height:140px; padding: 0 10px;">
 
                     <h5 class="title" style="text-align: left">
@@ -129,8 +140,7 @@
                   </a></h6></div></div></div>
       </div></div></div></div>
 <!-- ====================================================================================================================================== -->
-         <div class="col-xs-12 sponsor-box" style="margin-top:10px;background-color:#ffbd5a;z-index:3;       
-  box-shadow:0 3px 2px rgba(0, 0, 0, 0.73), 0 0 15px rgba(0, 0, 0, 0.41) inset;">
+         <div class="col-xs-12 sponsor-box">
            <div class="col-xs-12 title" style="text-align:center;margin:10px 0; color:#222" >Kost Sponsor</div>
          <div class="col-xs-12 col-lg-12 sponsor-row">
          <div class="col-xs-6 col-lg-3 col-md-3 col-sm-4 card-bottom card-md card-transparent" style="margin:0">
@@ -138,7 +148,7 @@
         <div class="col-xs-12" style="padding:0"><a href="#saran4" onClick="modalImage('saran4')"> 
         <a href="#saran4" onClick="modalImage('saran4')"><img style="margin: 0" id="saran-4" class="photo-user saran" onLoad="setHeight(this)" src="pictures/kost4.jpg"></a></div>
              <div class="col-xs-12" style="padding:0">
-             <h5 id="cards7-title" class="title" style="color:#333">Kamera Go Pro 12JKU Makguamb Mansgkuta</h5>
+             <h5 id="cards7-title" class="title" style="color:#333">Kamar Kost Dekat Bandara</h5>
             </div>
            <div class="col-xs-12" style="padding:0">
               <h5 class="title" style="padding:10px;margin:0">Rating : 
@@ -157,7 +167,7 @@
         <div class="col-xs-12" style="padding:0"><a href="#saran4" onClick="modalImage('saran4')"> 
         <a href="#saran4" onClick="modalImage('saran4')"><img style="margin: 0" id="saran-4" class="photo-user saran" onLoad="setHeight(this)" src="pictures/kost5.jpg"></a></div>
              <div class="col-xs-12" style="padding:0">
-             <h5 id="cards7-title" class="title" style="color:#333">Kamera Go Pro 12JKU Makguamb Mansgkuta</h5>
+             <h5 id="cards7-title" class="title" style="color:#333">Kamar Kost Dekat Bandara</h5>
             </div>
            <div class="col-xs-12" style="padding:0">
               <h5 class="title" style="padding:10px;margin:0">Rating : 
@@ -176,7 +186,7 @@
         <div class="col-xs-12" style="padding:0"><a href="#saran4" onClick="modalImage('saran4')"> 
         <a href="#saran4" onClick="modalImage('saran4')"><img style="margin: 0" id="saran-4" class="photo-user saran" onLoad="setHeight(this)" src="pictures/kost6.jpg"></a></div>
              <div class="col-xs-12" style="padding:0">
-             <h5 id="cards7-title" class="title" style="color:#333">Kamera Go Pro 12JKU Makguamb Mansgkuta</h5>
+             <h5 id="cards7-title" class="title" style="color:#333">Kamar Kost Dekat Bandara</h5>
             </div>
            <div class="col-xs-12" style="padding:0">
               <h5 class="title" style="padding:10px;margin:0">Rating : 
@@ -195,7 +205,7 @@
         <div class="col-xs-12" style="padding:0"><a href="#saran4" onClick="modalImage('saran4')"> 
         <a href="#saran4" onClick="modalImage('saran4')"><img style="margin: 0" id="saran-4" class="photo-user saran" onLoad="setHeight(this)" src="pictures/kost7.jpg"></a></div>
              <div class="col-xs-12" style="padding:0">
-             <h5 id="cards7-title" class="title" style="color:#333">Kamera Go Pro 12JKU Makguamb Mansgkuta</h5>
+             <h5 id="cards7-title" class="title" style="color:#333">Kamar Kost Dekat Bandara</h5>
             </div>
            <div class="col-xs-12" style="padding:0">
              <h5 class="title" style="padding:10px;margin:0">Rating : 
@@ -213,7 +223,7 @@
 <!-- =======================================================End of Comments==================================================================== -->
   <div class="container"> 
     <div class="row">
-      <div class="col-xs-12 col-lg-9 card-bottom effect5" style="margin: 30px 0 0 0; padding: 0">
+      <div class="col-xs-12 col-lg-9 card-bottom effect5" style="margin: 30px 0 20px 0; padding: 0">
            <h4 class="title" style="font-size:20px">Kost Menarik Lainnya</h4>
 <!-- ====================================================================================================================================== --> 
       <div class="col-xs-12 col-sm-6">
@@ -221,7 +231,7 @@
            <div class="col-xs-5 col-md-3" style="padding:0 2px">
             <img  id="saran-4" class="photo-user saran" onLoad="setHeight(this)" src="pictures/kost9.jpg"></div>
            <div class="col-xs-7 col-md-9" style="padding:15px">
-             <h5 style="margin:0" id="cards3-title" class="title">I Don't Need Your Money, or a Pot of Honey</h5>
+             <h5 style="margin:0" id="cards3-title" class="title">Kamar Kost Dekat Stasiun</h5>
              <h5 class="title" style="padding:10px;margin:0">Rating : 
                  <span class="glyphicon glyphicon-star star"></span>
                  <span class="glyphicon glyphicon-star star"></span>
@@ -237,7 +247,7 @@
           <div class="col-xs-5 col-md-3" style="padding:0 2px">
             <img  id="saran-4" class="photo-user saran" onLoad="setHeight(this)" src="pictures/kost10.jpg"></div>
           <div class="col-xs-7 col-md-9" style="padding:15px">
-            <h5 style="margin:0" id="cards3-title" class="title">I Don't Need Your Money, or a Pot of Honey</h5>
+            <h5 style="margin:0" id="cards3-title" class="title">Kamar Kost Dekat Stasiun</h5>
             <h5 class="title" style="padding:10px;margin:0">Rating : 
                 <span class="glyphicon glyphicon-star star"></span>
                 <span class="glyphicon glyphicon-star star"></span>
@@ -254,7 +264,7 @@
       <div class="col-xs-5 col-md-3" style="padding:0 2px">
        <img  id="saran-4" class="photo-user saran" onLoad="setHeight(this)" src="pictures/kost11.jpg"></div>
       <div class="col-xs-7 col-md-9" style="padding:15px">
-        <h5 style="margin:0" id="cards3-title" class="title">I Don't Need Your Money, or a Pot of Honey</h5>
+        <h5 style="margin:0" id="cards3-title" class="title">Kamar Kost Dekat Stasiun</h5>
         <h5 class="title" style="padding:10px;margin:0">Rating : 
             <span class="glyphicon glyphicon-star star"></span>
             <span class="glyphicon glyphicon-star star"></span>
@@ -270,7 +280,7 @@
      <div class="col-xs-5 col-md-3" style="padding:0 2px">
        <img  id="saran-4" class="photo-user saran" onLoad="setHeight(this)" src="pictures/kost12.jpg"></div>
      <div class="col-xs-7 col-md-9" style="padding:15px">
-       <h5 style="margin:0" id="cards3-title" class="title">I Don't Need Your Money, or a Pot of Honey</h5>
+       <h5 style="margin:0" id="cards3-title" class="title">Kamar Kost Dekat Stasiun</h5>
        <h5 class="title" style="padding:10px;margin:0">Rating : 
            <span class="glyphicon glyphicon-star star"></span>
            <span class="glyphicon glyphicon-star star"></span>

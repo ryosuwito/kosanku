@@ -277,6 +277,11 @@ a:hover{
   width: 100%;
   left: 0;
 }
+
+.main-photo-box{
+  margin:0;
+}
+
 .photo-user{
   -webkit-filter: brightness(92%) contrast(102%) saturate(1.3155);
   filter: brightness(92%) contrast(102%) saturate(1.3155);
@@ -435,6 +440,14 @@ a:hover{
   padding:10px;
   min-height:320px;
 }
+.detail-title{
+  margin-top:4.3%;
+  background-color:#ffbd5a;
+  min-height:0;
+  display:block;
+  text-align:center;
+  padding:0;
+}
 .circa-sm{
   width:40px;
   height:40px;
@@ -579,6 +592,7 @@ a:hover{
   text-align:center;background-color:#0f5689;
 
 }
+
 .masuk:hover{background-color:#2f6699;
   color:#fff;
   -webkit-animation: shadow 0.71s ease;
@@ -659,6 +673,12 @@ a:hover{
   color:#83d1e9;
   background-color: #009ece;
   background-size:cover
+}
+.sponsor-box{
+  margin-top:10px;
+  background-color:#ffbd5a;
+  z-index:3;       
+  box-shadow:0 3px 2px rgba(0, 0, 0, 0.73), 0 0 15px rgba(0, 0, 0, 0.41) inset;
 }
 /* Large desktop */
 @media (min-width: 1200px) { 
@@ -761,6 +781,16 @@ a:hover{
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
+  .main-photo-box{
+    padding: 0;
+    margin:0 -10px;
+    width: calc(100% + 20px);
+  }
+  .sponsor-box{
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
   .price{
     font-size: 24px !important;
   }
@@ -782,6 +812,31 @@ a:hover{
   #map{ 
     width:100%; 
     height: 250px
+  }
+  .effect5{
+    box-shadow: none;
+  }
+  .effect6{
+    border: none;
+    box-shadow: none;
+  }
+  .effect6:hover{
+    border: none;
+    box-shadow: none;
+    animation: none;
+    -webkit-animation: none;
+    box-shadow: none;
+  }
+  body{
+    background: none;
+  }
+  .detail-title{
+    margin-top:4.3%;
+    background:none;
+    min-height:0;
+    display:block;
+    text-align:center;
+    padding:0;
   }
 }
  

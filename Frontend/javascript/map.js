@@ -15,18 +15,18 @@ function initMap() {
             featureType: 'water',
             elementType: 'geometry',
             stylers: [
-                { hue: '#6699ff' },
-                { saturation: 100 },
-                { lightness: 8 },
-                { visibility: 'on' }
+                { hue: '#55ccff' },
+                { saturation: 90 },
+                { lightness: -32 },
+                { visibility: 'simplified' }
             ]
         },{
             featureType: 'landscape',
             elementType: 'geometry',
             stylers: [
                 { hue: '#44ff88' },
-                { saturation: 100 },
-                { lightness: -19 },
+                { saturation: 60 },
+                { lightness: -39 },
                 { visibility: 'simplified' }
             ]
         },{
