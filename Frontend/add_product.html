@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/costum.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body>
     <div class="container">
@@ -55,6 +55,9 @@
                 <h4 class="title" style="margin:0 0 0 10px">Alamat Lengkap<i class="hot" style="font-size:70%;font-weight:bold"> *(wajib)</i></h4>
             <div class="col-xs-12 col-sm-12" style="background-color:transparent">  
                 <textarea class="effect6" rows="4" cols="50" style="padding:15px; width:100%; margin-top: 5px" type="text" placeholder="Masukan Nama" name="deskripsi"></textarea></div></div>
+            <div id="map"></div>
+            <input class="hidden" type="text" id="lat" readonly="yes"><br>
+            <input class="hidden" type="text" id="lng" readonly="yes">
             <div class="col-xs-12 col-sm-12 detail-box" style="background-color:transparent">
                 <h4 class="title" style="margin:0 0 0 10px">Fasilitas<i class="hot" style="font-size:70%;font-weight:bold"> *(wajib)</i></h4>
                     
@@ -113,27 +116,32 @@
     <div class="hidden-xs col-sm-1 col-lg-2"></div></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-     <script language="JavaScript" type="text/javascript">
-       function HandleBrowseClick(){
-         var fileinput = document.getElementById("browse");
-         fileinput.click(); 
-       }
-       function Handlechange(event){
-         var fileinput = document.getElementById("browse");
-         var textinput = document.getElementById("filename");
-         textinput.value = fileinput.value;
-         var selectedFile = event.target.files[0];
-         var reader = new FileReader();
-
-         var imgtag = document.getElementById("ava");
-         imgtag.title = selectedFile.name;
-
-         reader.onload = function(event) {
-         imgtag.src = event.target.result;
-         };
-
-         reader.readAsDataURL(selectedFile);
+    <script language="JavaScript" type="text/javascript">
+        function HandleBrowseClick(){
+            var fileinput = document.getElementById("browse");
+            fileinput.click(); 
         }
-</script>
+        function Handlechange(event){
+            var fileinput = document.getElementById("browse");
+            var textinput = document.getElementById("filename");
+            textinput.value = fileinput.value;
+            var selectedFile = event.target.files[0];
+            var reader = new FileReader();
+
+            var imgtag = document.getElementById("ava");
+            imgtag.title = selectedFile.name;
+
+            reader.onload = function(event) {
+            imgtag.src = event.target.result;
+            };
+
+            reader.readAsDataURL(selectedFile);
+            }
+    </script>
+    <script type="text/javascript">
+        var lat = -6.220772462727775;
+        var lng = 106.62282224060709;
+    </script>
+    <script type="text/javascript" src="javascript/map.js"></script>
   </body>
 </html>

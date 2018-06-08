@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/costum.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body>
 
@@ -71,7 +71,15 @@
                         Lokasi :</h5>
                         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                           Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
-                 </div></div></section>
+                 </div>
+                
+                <div class="col-xs-12" style="padding:0">         
+                    <div id="map"></div>    
+                    <a href="http://maps.google.com/maps?z=18&t=m&q=loc:-6.220772462727775+106.62282224060709" target="_blank">
+                      <h5 class="titlesm daftar effect4" style="background-color:#0d6969;width:100%;margin: 10px 0 5px 0">
+                          Buka Petunjuk Arah</h5></a>
+                </div>
+                </div></section>
 
                <section name="post-footer">
                   <div class="hidden-xs col-md-12" style="border-top: 1px solid #aaa; padding: 20px">
@@ -116,7 +124,6 @@
              <a href="#" class="white-link">
                <h5 class="title daftar effect4" style="margin: 0px 0 10px 0">
                      Beri Rating</h5></a></div>
-                    
             <h6 class="title" style="text-align:center;color:#666">Ingin promosikan kost mu?
                 <a href="#" class="cool"><br/>Gelar lapakmu disini!
                   </a></h6></div></div></div>
@@ -291,6 +298,11 @@
 <!-- ====================================================================================================================================== -->
          
         </div></div></section>
-          
+      
+    <script type="text/javascript" src="javascript/map.js"></script>    
+    <script type="text/javascript">
+      var lat = -6.220772462727775;
+      var lng = 106.62282224060709;
+    </script>
   </body>
 </html>
