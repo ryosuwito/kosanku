@@ -1225,7 +1225,7 @@ a:hover{
 }
 .daftar-cool{
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
-  background-color:#195aef;
+  background-color:#027171;
   color:#fff
 }
 .daftar-cool:hover{
@@ -1257,12 +1257,13 @@ a:hover{
     transform:  rotate(0deg) ;
   }
 }
-input[type=text], input[type=password], input[type=number] , input[type=email] {
+input[type=text], input[type=password], input[type=number] , input[type=email] , textarea{
   width: 100%;
-  padding: 12px 20px;
+  padding: 4px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: none;
+  border-bottom: 1px solid #777;
   box-sizing: border-box;
   background-color: #fff;
   color:#555;

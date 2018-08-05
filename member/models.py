@@ -11,5 +11,5 @@ class Member(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     profile_photo = models.ImageField(upload_to = "profile_photo/%Y/%m/%d/", blank=True)
     nama_lengkap = models.CharField(max_length=255, blank=True)
-
+    alamat_lengkap = models.CharField(max_length=400, blank=True)
 

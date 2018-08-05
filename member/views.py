@@ -12,8 +12,6 @@ def register(request):
         member_form = MemberForm(request.POST, request.FILES, prefix="member_form")
         if user_form.is_valid:
             user = user_form.save()
-            username = user_form.cleaned_data.get('username')
-            password = user_form.cleaned_data.get('password')
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         if member_form.is_valid:
             member = member_form.save()
