@@ -14,45 +14,51 @@
   <body>
     <div class="container">
     <div class="hidden-xs col-sm-1 col-lg-2"></div>
-    <div class="col-xs-12 col-sm-10 col-lg-8" style="display:block">
-      <div class="col-xs-12 card-bottom effect5" style="margin:90px 0;padding:20px 10px 0 10px; text-align:center">
+    <div class="col-xs-12 col-sm-10 col-lg-8" style="display:block; padding: 0">
+      <div class="col-xs-12 card-bottom effect5" style="margin:10% 0;padding:20px 5%;">
 
-        <h4 class="title" style="margin:15px">Selamat Datang di Kosanku, silakan isi form berikut ini untuk mendaftar sebagai member Kosanku.</h4>
-        <form action="action_page.php">
-          <div class="col-xs-12 col-sm-6">
-            <div><p style="font-size:8pt;margin-bottom:3px;text-align:left">Nama Akun (maks 20 karakter tanpa spasi)<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>  
-              <input class="effect6" style="width:100%" type="text" placeholder="Masukan Nama" name="uname" required></div>
-             <div><p style="font-size:8pt;margin-bottom:3px;text-align:left">Email valid (untuk konfimasi akun)<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>  
-               <input class="effect6" style="width:100%" type="text" placeholder="Masukan Email" name="mail" required></div></div>
-           <div class="col-xs-12 col-sm-6">
-            <div><p style="font-size:8pt;margin-bottom:3px;text-align:left">Kata Sandi (min 6 karakter)<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>
-               <input class="effect6" style="width:100%" type="password" placeholder="Masukan Kata Sandi" name="psw" required></div>
-             <div><p style="font-size:8pt;margin-bottom:3px;text-align:left">Masukan ulang kata sandi<i class="hot"style="font-size:150%;font-weight:normal;margin:0"> *</i></p>
-               <input class="effect6" style="width:100%" type="password" placeholder="Ulangi Kata Sandi" name="psw2" required></div></div>
-          
+        <h4 class="title" style="margin:15px 0; text-align: left">Selamat Datang di Kosanku, silakan isi form berikut ini untuk mendaftar sebagai member Kosanku.</h4>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <p>Foto Profil :</p>
+          <p style="text-align: center">
+            <img src="/media/pictures/user.gif" id="dummy_profile_photo" style="width: 100px; height: 100px;" >
+            </p>
+              <h2 class="unggah" style="top:31%;right:2.64%;" id="browse" onclick="HandleBrowseClick();">&plus;</h2>
+              <p style="font-size:8pt;margin-bottom:3px;text-align:left">Foto Profile<i style="font-size:80%"> *(.JPG/.JPEG/.PNG/.GIF)</i></p>
+              
+             {{member_form.profile_photo}}
+              <input type="text" id="filename" readonly="true"placeholder="Klik Tombol + untuk Mengunggah Foto"/>
+          <p>Nama Lengkap :</p>
+          {{member_form.nama_lengkap}}
+          <hr>
+          <p>Username :</p>
+          {{user_form.username}}
+          <p>Email :</p>
+          {{user_form.email}}
+          <p>Password :</p>
+          {{user_form.password}}
            <div class="col-xs-3"></div>
-           <div class="col-xs-12 col-sm-6" style="margin-top:20px">
-             <button class="daftar-cool effect4" style="width:100%" type="submit">Kirim</button>
-             <p style="padding:1px">
-               <a href="http://www.freepik.com/free-photos-vectors/people" style="color:#888">People vector designed by Freepik</a></p></div>
-           <div class="col-xs-3"></div>
+           <div class="col-xs-12 col-sm-6" style="margin:20px 0">
+             <button class="daftar-cool" style="width:100%" type="submit">Kirim</button>
+             <div class="col-xs-3"></div>
          </form></div></div>
     <div class="hidden-xs col-sm-1 col-lg-2"></div></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
      <script language="JavaScript" type="text/javascript">
        function HandleBrowseClick(){
-         var fileinput = document.getElementById("browse");
+         var fileinput = document.getElementById("id_member_form-profile_photo");
          fileinput.click(); 
        }
        function Handlechange(event){
-         var fileinput = document.getElementById("browse");
          var textinput = document.getElementById("filename");
+         var fileinput = document.getElementById("id_member_form-profile_photo");
          textinput.value = fileinput.value;
          var selectedFile = event.target.files[0];
          var reader = new FileReader();
 
-         var imgtag = document.getElementById("ava");
+         var imgtag = document.getElementById("dummy_profile_photo");
          imgtag.title = selectedFile.name;
 
          reader.onload = function(event) {

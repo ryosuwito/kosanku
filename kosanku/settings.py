@@ -123,6 +123,6 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (os.path.join(
     BASE_DIR, "member", "static"),)
 STATIC_ROOT = os.path.join(
-    os.path.dirname(BASE_DIR), "deploy", "collected_static")
+    os.path.dirname(BASE_DIR), "Togu/deploy", "collected_static")
 MEDIA_ROOT = os.path.join(
-    os.path.dirname(BASE_DIR), "deploy", "media")
+    os.path.dirname(BASE_DIR), "Togu/deploy", "media")

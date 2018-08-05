@@ -1,3 +1,5 @@
 ss/
 *.pyc
 venv/
+deploy/media/profile_photo/
+db.sqlite3
