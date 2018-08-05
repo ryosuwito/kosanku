@@ -21,6 +21,9 @@
           {% csrf_token %}
           {% if mode == "pemilik" %}
           <h4 class="title" style="margin:15px 0; font-weight: 100">Daftar Sebagai Pemilik Kost</h4>
+          {% else %}
+          <h4 class="title" style="margin:15px 0; font-weight: 100">Daftar Sebagai Pencari Kost</h4>
+          {% endif %}          
           <p style="text-align: center">
             <img src="/media/pictures/user.gif" id="dummy_profile_photo" style="width: 100px; height: 100px;" >
             </p>
@@ -32,9 +35,6 @@
           {{member_form.nama_lengkap}}
           {{member_form.alamat_lengkap}}
           <hr>
-          {% else %}
-          <h4 class="title" style="margin:15px 0; font-weight: 100">Daftar Sebagai Pencari Kost</h4>
-          {% endif %}
           {{user_form.username}}
           {{user_form.email}}
           {{user_form.password}}
