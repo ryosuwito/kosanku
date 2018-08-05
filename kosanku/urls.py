@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from member.views import register, daftar, login_member, pre_register, profile, logout_member
+from kost.views import index
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    url(r'^$', index, name="home"),
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', login_member, name="login"),
     url(r'^logout/$', logout_member, name="logout"),
