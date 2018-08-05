@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Profil Tukang Kibul - Kosanku</title>
+    <title>Profil {{ request.user.member.nama_lengkap | title}} - Kosanku</title>
     <meta name="viewport" content="width=device-width,
                                   initial-scale=1.0,
                                   user-scalable=no">
@@ -39,6 +39,11 @@
                 <div class="card-bottom" style="margin:0;display:block;height:auto;padding:10px 0">
                   <p class="title" style="margin:0 0 0 10px">{{request.user.member.nama_lengkap | title}}</p>
                   <p style="margin-top: 5px">Alamat: <br>{{request.user.member.alamat_lengkap}}</p>
+                  {% if user.member.is_pemilik_kost %}
+                  <p class="btn btn-primary" style="width: 100%">Upload Kost</p>
+                  {% else %}
+                  <p class="btn btn-primary" style="width: 100%">Cari Kost</p>
+                  {% endif %}
                 </div>
              </div>
            </div>

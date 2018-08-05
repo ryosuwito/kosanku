@@ -21,6 +21,7 @@ def register(request):
         if member_form.is_valid():
             member = member_form.save(commit=False)
             member.user = user
+            member.is_pemilik_kost = True 
             member.save()
         
         return redirect(reverse("profile"))
@@ -32,15 +33,24 @@ def register(request):
 def daftar(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST, prefix="user_form")
+        member_form = MemberForm(request.POST, request.FILES, prefix="member_form")
         if user_form.is_valid():
             user = user_form.save(commit=False)
             user.set_password(user_form.cleaned_data.get('password'))
             user.save()
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            return HttpResponse("Success")
+
+        if member_form.is_valid():
+            member = member_form.save(commit=False)
+            member.user = user
+            member.is_pemilik_kost = False 
+            member.save()
+
+        return redirect(reverse("profile"))
     else:
         user_form = UserForm(prefix="user_form")
-    return render(request, "member/daftar.html", {"user_form":user_form, "mode":"pencari"})
+        member_form = MemberForm(prefix="member_form")  
+    return render(request, "member/daftar.html", {"user_form":user_form, "mode":"pencari", "member_form":member_form})
 
 def login_member(request):
     if request.method == 'POST':
