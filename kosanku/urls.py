@@ -15,12 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from member.views import register
+from member.views import register, daftar, login_member, pre_register, profile, logout_member
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^daftar/', register)
+    url(r'^login/$', login_member, name="login"),
+    url(r'^logout/$', logout_member, name="logout"),
+    url(r'^pre/$', pre_register, name="pre_register"),
+    url(r'^daftar/$', daftar, name="daftar_pencari"),
+    url(r'^profile/$', profile, name="profile"),
+    url(r'^register/$', register, name="daftar_pemilik")
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
