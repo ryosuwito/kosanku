@@ -16,13 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from member.views import register, daftar, login_member, pre_register, profile, logout_member
-from kost.views import index
+from kost.views import index, add_kost, detail_kost
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', index, name="home"),
     url(r'^admin/', admin.site.urls),
+    url(r'^add/$', add_kost, name="add_kost"),
+    url(r'^detail/$', detail_kost, name="detail_kost"),
     url(r'^login/$', login_member, name="login"),
     url(r'^logout/$', logout_member, name="logout"),
     url(r'^pre/$', pre_register, name="pre_register"),

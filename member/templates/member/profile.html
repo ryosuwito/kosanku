@@ -33,16 +33,18 @@
              <div name="prf-header" class="col-xs-12" style="padding:10px 0">
               <div name="prf-ava" class="col-xs-12" style="text-align: center">
                 <img id="ava" src="/media/{{request.user.member.profile_photo}}" alt="Avatar" class="photo-user avatar avatars" style="
-               -webkit-filter: none;width:200px;height:200px;border-radius:120px; padding:5px"/>
+               -webkit-filter: none;width:160px;height:160px;border-radius:120px; padding:5px"/>
               </div>
               <div name="prf-title" class="col-xs-12">
                 <div class="card-bottom" style="margin:0;display:block;height:auto;padding:10px 0">
                   <p class="title" style="margin:0 0 0 10px">{{request.user.member.nama_lengkap | title}}</p>
                   <p style="margin-top: 5px">Alamat: <br>{{request.user.member.alamat_lengkap}}</p>
                   {% if user.member.is_pemilik_kost %}
-                  <p class="btn btn-primary" style="width: 100%">Upload Kost</p>
+                  <a href="{% url 'add_kost' %}">
+                  <p class="btn btn-primary" style="width: 100%">Upload Kost</p></a>
                   {% else %}
-                  <p class="btn btn-primary" style="width: 100%">Cari Kost</p>
+                  <a href="{% url 'detail_kost' %}">
+                  <p class="btn btn-primary" style="width: 100%">Cari Kost</p></a>
                   {% endif %}
                 </div>
              </div>
