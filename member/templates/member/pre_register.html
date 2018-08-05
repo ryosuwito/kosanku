@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,
+                                initial-scale=1.0,
+                                user-scalable=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/costum.css">
+        <title>
+            Pre Register - Kosanku
+        </title>
+    </head>
+    
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/costum.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12 card-bottom effect5" style="margin-top:10%; min-height: 150px; text-align:center">
+            <h3>Daftar akun sebagai :</h3>
+            <hr>
+            <a href="{% url 'daftar_pemilik' %}">
+                <p class="btn btn-primary" style="width: 200px">Pemilik Kost</p>
+            </a>
+            <hr>
+            <a href="{% url 'daftar_pencari' %}">
+                <p class="btn btn-primary" style="width: 200px">Pencari Kost</p>
+            </a>
+        </div>
+           
+      </div>
+
+    </div>
+        <script type="text/javascript" src="/static/javascript/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/javascript/jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript" src="/static/javascript/popper.min.js"></script>
+    </body>
+</html>

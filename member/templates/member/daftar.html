@@ -17,9 +17,10 @@
     <div class="col-xs-12 col-sm-10 col-lg-8" style="display:block; padding: 0">
       <div class="col-xs-12 card-bottom effect5" style="margin:10% 0;padding:20px 5%;">
 
-        <h4 class="title" style="margin:15px 0; font-weight: 100">Daftar Sebagai Pemilik Kost</h4>
         <form method="post" enctype="multipart/form-data">
           {% csrf_token %}
+          {% if mode == "pemilik" %}
+          <h4 class="title" style="margin:15px 0; font-weight: 100">Daftar Sebagai Pemilik Kost</h4>
           <p style="text-align: center">
             <img src="/media/pictures/user.gif" id="dummy_profile_photo" style="width: 100px; height: 100px;" >
             </p>
@@ -31,12 +32,15 @@
           {{member_form.nama_lengkap}}
           {{member_form.alamat_lengkap}}
           <hr>
+          {% else %}
+          <h4 class="title" style="margin:15px 0; font-weight: 100">Daftar Sebagai Pencari Kost</h4>
+          {% endif %}
           {{user_form.username}}
           {{user_form.email}}
           {{user_form.password}}
            <div class="col-xs-3"></div>
            <div class="col-xs-12 col-sm-6" style="margin:20px 0">
-             <button class="daftar-cool" style="width:100%" type="submit">DAFTAR</button>
+             <button class="btn btn-success" style="width:100%" type="submit">DAFTAR</button>
              <div class="col-xs-3"></div>
          </form></div></div>
     <div class="hidden-xs col-sm-1 col-lg-2"></div></div>

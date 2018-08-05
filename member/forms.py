@@ -14,6 +14,16 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ("username","email","password")
 
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=255, min_length=4)
+    password = forms.CharField(max_length=255, min_length=8)
+    def __init__(self, *args, **kwargs):
+        super(LoginForm,self).__init__(*args, **kwargs)
+        self.fields['password'].widget = forms.PasswordInput()
+        self.fields['password'].widget.attrs['placeholder'] = 'Password'
+        self.fields['username'].widget.attrs['placeholder'] = 'Username'
+
+
 class MemberForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(MemberForm,self).__init__(*args, **kwargs)
