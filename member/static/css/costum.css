@@ -815,6 +815,7 @@ a:hover{
   }
   .effect5{
     box-shadow: none;
+    border:none;
   }
   .effect6{
     border: none;
