@@ -19,9 +19,11 @@ def register(request):
             user.save()
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         if member_form.is_valid():
-            member = member_form.save()
+            member = member_form.save(commit=False)
             member.user = user
-        return HttpResponse("%s, %s"%(user.member.nama_lengkap, user.member.profile_photo))
+            member.save()
+        
+        return redirect(reverse("profile"))
     else:
         user_form = UserForm(prefix="user_form")
         member_form = MemberForm(prefix="member_form")   
@@ -48,7 +50,7 @@ def login_member(request):
             password = user_form.cleaned_data.get('password')
             user = authenticate(request,username=username, password=password)
             login(request, user)
-            return HttpResponse("Success")
+            return redirect(reverse("profile"))
     else:
         user_form = LoginForm()
     return render(request, "member/login.html", {"user_form":user_form, "mode":"pencari"})
