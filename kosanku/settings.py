@@ -130,8 +130,4 @@ STATICFILES_DIRS = (os.path.join(
 STATIC_ROOT = os.path.join(
     os.path.dirname(BASE_DIR), "kosanku/deploy", "collected_static")
 MEDIA_ROOT = os.path.join(
-<<<<<<< HEAD
     os.path.dirname(BASE_DIR), "kosanku/deploy", "media")
-=======
-    os.path.dirname(BASE_DIR), "Togu/deploy", "media")
->>>>>>> 18077254b31a1cd062a0df378f0951c04e930fda
