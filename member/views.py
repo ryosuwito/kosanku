@@ -40,13 +40,13 @@ def daftar(request):
             user.save()
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
-        if member_form.is_valid():
-            member = member_form.save(commit=False)
-            member.user = user
-            member.is_pemilik_kost = False 
-            member.save()
+            if member_form.is_valid():
+                member = member_form.save(commit=False)
+                member.user = user
+                member.is_pemilik_kost = False 
+                member.save()
 
-        return redirect(reverse("profile"))
+            return redirect(reverse("profile"))
     else:
         user_form = UserForm(prefix="user_form")
         member_form = MemberForm(prefix="member_form")  
